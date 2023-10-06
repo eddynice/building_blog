@@ -1,6 +1,6 @@
 <?php
 // Initialize the session
-//session_start();
+session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 // if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -123,6 +123,7 @@ if(isset($_POST['submit'])){
                                                 <label for="inputPassword">Password</label>
                                                 <span style="color:red"><?php echo  $password_err ?></span>
                                             </div>
+                                            
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
