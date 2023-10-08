@@ -50,15 +50,17 @@ $result= mysqli_query($conn, $query);
                                   
                                     <tbody>
                                         <?php  
-                                        while($row = mysqli_fetch_assoc($result)){
-                                            echo "<tr>
-                                      <td>{$row['id']}</td>
-                                      <td>{$row['title']}</td>
-                                      <td>{$row['details']}</td>
-                                      <td>{$row['images']}</td>
-                                      <td>{$row['created_date']}</td>
-</tr>";
-                                        }
+                                       while ($row = mysqli_fetch_assoc($result)) {
+                                        echo "<tr>
+                                            <td>{$row['id']}</td>
+                                            <td>{$row['title']}</td>
+                                            <td>{$row['details']}</td>
+                                            <td>{$row['images']}</td>
+                                            <td>{$row['created_date']}</td>
+                                            <td><a href='edit.php?id={$row['id']}'>Edit</a></td>
+                                            <td><a href='delete.php?id={$row['id']}'>Delete</a></td>
+                                        </tr>";
+                                    }
                                         ?>
                                         
                                         
